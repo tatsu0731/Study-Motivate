@@ -1,10 +1,12 @@
 import Button from "@/Components/Atoms/Button";
 import GrowImages from "@/Components/Atoms/GrowImages";
+import Form from "@/Components/Organism/Form";
 import StatusBox from "@/Components/Organism/StatusBox";
 import Footer from "@/Components/Templetes/Footer";
 import Header from "@/Components/Templetes/Header";
 import { useState } from "react";
 import Modal from "react-modal";
+import useSWR from "swr";
 
 Modal.setAppElement(".App");
 
@@ -47,6 +49,7 @@ export default function Home() {
           </section>
           <Modal isOpen={modalIsOpen} style={modalStyle}>
             <button onClick={() => setIsOpen(false)}>✖︎</button>
+            <Form />
           </Modal>
           {/* ここら辺に今日の入力が終わったらお疲れ様でした！みたいな表記を出したい */}
         </div>
